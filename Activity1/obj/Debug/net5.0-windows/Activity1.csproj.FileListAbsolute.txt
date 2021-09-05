@@ -1,0 +1,17 @@
+C:\repos\CST150\Activity1\bin\Debug\net5.0-windows\Activity1.exe
+C:\repos\CST150\Activity1\bin\Debug\net5.0-windows\Activity1.deps.json
+C:\repos\CST150\Activity1\bin\Debug\net5.0-windows\Activity1.runtimeconfig.json
+C:\repos\CST150\Activity1\bin\Debug\net5.0-windows\Activity1.runtimeconfig.dev.json
+C:\repos\CST150\Activity1\bin\Debug\net5.0-windows\Activity1.dll
+C:\repos\CST150\Activity1\bin\Debug\net5.0-windows\ref\Activity1.dll
+C:\repos\CST150\Activity1\bin\Debug\net5.0-windows\Activity1.pdb
+C:\repos\CST150\Activity1\obj\Debug\net5.0-windows\Activity1.Form1.resources
+C:\repos\CST150\Activity1\obj\Debug\net5.0-windows\Activity1.csproj.GenerateResource.cache
+C:\repos\CST150\Activity1\obj\Debug\net5.0-windows\Activity1.GeneratedMSBuildEditorConfig.editorconfig
+C:\repos\CST150\Activity1\obj\Debug\net5.0-windows\Activity1.AssemblyInfoInputs.cache
+C:\repos\CST150\Activity1\obj\Debug\net5.0-windows\Activity1.AssemblyInfo.cs
+C:\repos\CST150\Activity1\obj\Debug\net5.0-windows\Activity1.csproj.CoreCompileInputs.cache
+C:\repos\CST150\Activity1\obj\Debug\net5.0-windows\Activity1.dll
+C:\repos\CST150\Activity1\obj\Debug\net5.0-windows\ref\Activity1.dll
+C:\repos\CST150\Activity1\obj\Debug\net5.0-windows\Activity1.pdb
+C:\repos\CST150\Activity1\obj\Debug\net5.0-windows\Activity1.genruntimeconfig.cache
