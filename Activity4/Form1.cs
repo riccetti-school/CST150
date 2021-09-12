@@ -31,7 +31,7 @@ namespace Activity4
         {
             // make sure the text is a number value
             double val;
-            if(double.TryParse(v, out val))
+            if(double.TryParse(v, out val) && val > -1)
             {
                 if(val < 60)
                 {
