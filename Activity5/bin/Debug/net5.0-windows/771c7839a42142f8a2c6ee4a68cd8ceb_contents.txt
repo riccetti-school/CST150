@@ -1,0 +1,19 @@
+write a windows form application that uses a file dialog control to allow the user to select a file for input, processing the contents of the file as follows:
+1. converts all the words to lower-case.
+2. finds the first and last word alphabetically.
+3. finds the longest word.
+4. finds the word with the most vowels.
+display the above statistics in a text box and write the above statistics to a file; include a screenshot of your program running with successful output.
+
+this assignment uses a rubric. please review the rubric prior to beginning the assignment to become familiar with the expectations for successful completion.
+
+you are not required to submit this assignment to lopeswrite.
+====================================
+First: 1.
+Last: your
+
+====================================
+Longest Word: alphabetically.
+
+====================================
+Most Vowels: application
