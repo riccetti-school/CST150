@@ -26,11 +26,12 @@ namespace Activity2
                 double cm = 0.0;
 
                 cm = inches * 2.54;
-                textBox2.Text = cm.ToString();
+                textBox2.Text = cm.ToString("F3");
             }
-            catch
+            catch(Exception ex)
             {
-                label3.Text = "Error";
+                textBox2.Text = string.Empty;
+                label3.Text = $"Error: {ex.Message}";
             }
         }
     }
