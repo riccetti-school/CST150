@@ -42,7 +42,7 @@ namespace Activity8
         /// </summary>
         /// <param name="carbGrams"></param>
         /// <returns></returns>
-        public double ToCarbCalries(double carbGrams)
+        public double ToCarbCalories(double carbGrams)
         {
             try
             {
