@@ -18,6 +18,11 @@ namespace Activity8
         public Form1()
         {
             InitializeComponent();
+
+            // usability items
+            // users do not need to access these textboxes
+            textBox2.Enabled = false;
+            textBox4.Enabled = false;
         }
 
 
@@ -38,10 +43,45 @@ namespace Activity8
         /// </summary>
         /// <param name="carbGrams"></param>
         /// <returns></returns>
-        private double CarbCalries(double carbGrams)
+        private double CarbCalories(double carbGrams)
         {
             return _convert.ToCarbCalories(carbGrams);
         }
 
+        /// <summary>
+        /// this button handles the convert action for fat grams
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double val = double.Parse(textBox1.Text);
+                textBox2.Text = FatCalories(val).ToString();
+            }
+            catch (Exception)
+            {
+                textBox2.Text = "Invalid conversion..";
+            }
+        }
+
+        /// <summary>
+        /// this function handles the carb convert action
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double val = double.Parse(textBox3.Text);
+                textBox4.Text = CarbCalories(val).ToString();
+            }
+            catch (Exception)
+            {
+                textBox4.Text = "Invalid conversion..";
+            }
+        }
     }
 }
