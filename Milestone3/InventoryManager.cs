@@ -8,7 +8,10 @@ namespace Milestone3
 {
     public class InventoryManager
     {
-        private ItemObj[] Items = new ItemObj[0];
+        private ItemObj[] items = new ItemObj[0];
+
+
+        public int GetInventoryCount() => items.Length;
 
         /// <summary>
         /// add an item to our inventory
@@ -16,9 +19,9 @@ namespace Milestone3
         /// <param name="i"></param>
         public void Add(ItemObj i)
         {
-            var l = Items.Length + 1;
-            Array.Resize<ItemObj>(ref Items, l);
-            Items[l-1] = i;
+            var l = items.Length + 1;
+            Array.Resize<ItemObj>(ref items, l);
+            items[l - 1] = i;
         }
 
 
@@ -28,37 +31,47 @@ namespace Milestone3
         /// <param name="id"></param>
         public void Remove(Guid id)
         {
-            if (Items == null) return;
+            if (items == null) return;
 
-            if (Items.Any(c => c.Id.ToString() == id.ToString()))
+            if (items.Any(c => c.Id.ToString() == id.ToString()))
             {
-                ItemObj[] temp = new ItemObj[Items.Length - 1];
-                for (int i = 0; i < Items.Length; i++)
+                ItemObj[] temp = new ItemObj[items.Length - 1];
+                for (int i = 0; i < items.Length; i++)
                 {
-                    if (Items[i].Id != id)
+                    if (items[i].Id != id)
                     {
-                        temp[i - 1] = Items[i];
+                        temp[i - 1] = items[i];
                     }
                 }
 
-                Array.Resize<ItemObj>(ref Items, Items.Length - 1);
-                temp.CopyTo(Items, 0);
+                Array.Resize<ItemObj>(ref items, items.Length - 1);
+                temp.CopyTo(items, 0);
             }
         }
 
         /// <summary>
         /// display the inventory list
         /// </summary>
-        public void Display()
+        public void Display(bool UI = false)
         {
             StringBuilder sb = new StringBuilder();
-            foreach (var i in Items)
+            foreach (var i in items)
                 sb.AppendLine(i.ToString());
 
             if (sb.Length > 0)
-                System.Windows.Forms.MessageBox.Show(sb.ToString());
+            {
+                if (UI)
+                    System.Windows.Forms.MessageBox.Show(sb.ToString());
+                else
+                    System.Diagnostics.Debug.WriteLine(sb.ToString());
+            }
             else
-                System.Windows.Forms.MessageBox.Show("No items in inventory");
+            {
+                if (UI)
+                    System.Windows.Forms.MessageBox.Show("No items in inventory");
+                else
+                    System.Diagnostics.Debug.WriteLine("No items in inventory");
+            }
         }
 
 
@@ -71,9 +84,9 @@ namespace Milestone3
         public ItemObj[] Search(int Qty = -1, bool Damaged = false)
         {
             var l = new List<ItemObj>();
-            foreach(var i in Items)
+            foreach (var i in items)
             {
-                if(Qty > 0)
+                if (Qty > 0)
                 {
                     if (i.QtyOnHand == Qty)
                         l.Add(i);
@@ -91,10 +104,10 @@ namespace Milestone3
         /// <param name="id"></param>
         public void ReStock(int Qty, Guid id)
         {
-            for(int i=0;i<Items.Length;i++)
+            for (int i = 0; i < items.Length; i++)
             {
-                if (Items[i].Id.ToString() == id.ToString())
-                    Items[i].Receive(Qty);
+                if (items[i].Id.ToString() == id.ToString())
+                    items[i].Receive(Qty);
             }
         }
     }
