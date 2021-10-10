@@ -13,6 +13,9 @@ namespace Milestone3
 
         public int GetInventoryCount() => items.Length;
 
+
+        public ItemObj[] GetInventoryList() => items;
+
         /// <summary>
         /// add an item to our inventory
         /// </summary>
@@ -107,7 +110,7 @@ namespace Milestone3
             for (int i = 0; i < items.Length; i++)
             {
                 if (items[i].Id.ToString() == id.ToString())
-                    items[i].Receive(Qty);
+                    items[i].QtyOnHand += Qty;
             }
         }
     }
