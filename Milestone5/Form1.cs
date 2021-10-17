@@ -62,6 +62,9 @@ namespace Milestone5
             {
                 comboBox1.Items.Add(i);
                 comboBox2.Items.Add(i);
+                System.Threading.Thread.Yield();
+                label3.Text = $"Inventory Count: {_im.GetInventoryCount()}";
+                label3.Refresh();
             }
 
             try
@@ -72,8 +75,7 @@ namespace Milestone5
             catch (Exception)
             {
             }
-
-            label3.Text = $"Inventory Count: {_im.GetInventoryCount()}";
+            
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -84,6 +86,7 @@ namespace Milestone5
         private void Form1_Load(object sender, EventArgs e)
         {
             label3.Text = string.Empty;
+            label4.Text = string.Empty;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -104,7 +107,10 @@ namespace Milestone5
 
                 var l = _im.Search(qty);
 
-                _im.Display(true, l);
+                if(sender != null)
+                    _im.Display(true, l);
+                else
+                    _im.Display(false, l);
 
             }
             catch (Exception)
@@ -127,6 +133,58 @@ namespace Milestone5
             }
             catch (Exception)
             {
+            }
+        }
+
+        private void L(string inData)
+        {
+            //label4.Text = string.Empty;
+            label4.Text = inData;
+            label4.Refresh();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            L("Starting stress test....");
+            System.Threading.Thread.Sleep(3000);
+            L("Adding a random number of inventory items...");
+            var i = new Random((int)DateTime.Now.Ticks).Next(100);
+            for (int y = 0; y < i; y++)
+            {
+                button2_Click(null, null);
+                System.Threading.Thread.Yield();
+            }
+
+            L("Removing items...");
+            var it = comboBox2.Items.Count;
+            var rt = new Random((int)DateTime.Now.Ticks).Next(it); ;
+            for(int x=0;x<rt;x++)
+            {
+                button3_Click(null, null);
+                System.Threading.Thread.Yield();
+            }
+
+            L("Display the items int he debug window...");
+            _im.Display();
+
+            L("Multi-Searching....");
+            var g = new Random((int)DateTime.Now.Ticks).Next(100);
+            for(int h=0;h<g;h++)
+            {
+                var f = new Random((int)DateTime.Now.Ticks).Next(10);
+                textBox1.Text = f.ToString();
+                button5_Click(null, null);
+                System.Threading.Thread.Yield();
+            }
+
+            L("Restocking.....");
+            g = new Random((int)DateTime.Now.Ticks).Next(100);
+            for (int h = 0; h < g; h++)
+            {
+                var f = new Random((int)DateTime.Now.Ticks).Next(10);
+                textBox2.Text = f.ToString();
+                button6_Click(null, null);
+                System.Threading.Thread.Yield();
             }
         }
     }

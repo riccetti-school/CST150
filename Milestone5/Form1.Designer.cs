@@ -42,13 +42,15 @@ namespace Milestone5
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(13, 13);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(141, 23);
             this.button1.TabIndex = 0;
             this.button1.Text = "Run Tests";
             this.button1.UseVisualStyleBackColor = true;
@@ -163,11 +165,32 @@ namespace Milestone5
             this.label3.TabIndex = 13;
             this.label3.Text = "label3";
             // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(496, 13);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(114, 23);
+            this.button7.TabIndex = 14;
+            this.button7.Text = "Run Stress Test";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(205, 13);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(38, 15);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "label4";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 347);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
@@ -207,6 +230,8 @@ namespace Milestone5
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Label label4;
     }
 }
 
