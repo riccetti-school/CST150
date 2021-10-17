@@ -65,6 +65,7 @@ namespace Activity15
             this.MinimizeBox = false;
             this.Name = "ResultForm";
             this.Text = "Your Result";
+            this.Load += new System.EventHandler(this.ResultForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

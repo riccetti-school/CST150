@@ -96,5 +96,10 @@ namespace Activity15
             comboBox3.SelectedIndex = 0;
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new ResultForm().Show(this);
+        }
     }
 }
