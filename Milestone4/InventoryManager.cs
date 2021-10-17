@@ -41,10 +41,10 @@ namespace Milestone4
         /// <summary>
         /// display the inventory list
         /// </summary>
-        public void Display(bool UI = false)
+        public void Display(bool UI = false, List<ItemObj> toDisplay = null)
         {
             StringBuilder sb = new StringBuilder();
-            foreach (var i in items)
+            foreach (var i in toDisplay == null ? items : toDisplay)
                 sb.AppendLine(i.ToString());
 
             if (sb.Length > 0)
