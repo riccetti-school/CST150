@@ -41,7 +41,7 @@ namespace Milestone4
             t.ReStock(100, id);
 
             // check for our item
-            var y = t.Search(-1, true);
+            var y = t.Search(-1);
 
             if (y.Any(c => c.Id.ToString() == id.ToString()))
                 Debug.WriteLine("FAILED!!! - Found something we should not have");

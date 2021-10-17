@@ -92,5 +92,26 @@ namespace Milestone4
 
             FillItems();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                // get search list
+                var qty = int.Parse(textBox1.Text);
+                //var dmg = checkBox1.Checked;
+
+                var l = _im.Search(qty);
+
+                _im.Display(true, l);
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Nothing to display");
+            }
+
+        }
     }
 }

@@ -70,12 +70,12 @@ namespace Milestone4
         /// <param name="Qty"></param>
         /// <param name="Damaged"></param>
         /// <returns></returns>
-        public List<ItemObj> Search(int Qty = -1, bool Damaged = false)
+        public List<ItemObj> Search(int Qty = -1)
         {
             var t = new List<ItemObj>();
             if (Qty > -1)
                 t.AddRange(items.FindAll(c => c.QtyOnHand == Qty));
-            t.AddRange(items.FindAll(c => c.IsDamaged == Damaged));
+            //t.AddRange(items.FindAll(c => c.IsDamaged == Damaged));
 
             return t;
         }
