@@ -55,6 +55,7 @@ namespace Activity15
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(177, 23);
             this.comboBox2.TabIndex = 1;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // comboBox3
             // 
@@ -74,11 +75,12 @@ namespace Activity15
             // 
             // button1
             // 
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.Location = new System.Drawing.Point(23, 265);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(349, 94);
             this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
+            this.button1.Text = "Get Luck Number!";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // label1
@@ -136,6 +138,7 @@ namespace Activity15
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Dominic Riccetti - Luck Numbers";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
