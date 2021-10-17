@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Milestone4
+namespace Milestone5
 {
     public class InventoryManager
     {

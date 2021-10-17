@@ -1,5 +1,5 @@
 ﻿
-namespace Milestone4
+namespace Milestone5
 {
     partial class Form1
     {
@@ -185,7 +185,7 @@ namespace Milestone4
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
-            this.Text = "Dominic Riccetti - Milestone 4";
+            this.Text = "Dominic Riccetti - Milestone 5";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
