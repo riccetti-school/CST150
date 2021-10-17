@@ -89,7 +89,7 @@ namespace Milestone3
             var l = new List<ItemObj>();
             foreach (var i in items)
             {
-                if (Qty > 0)
+                if (Qty > -1)
                 {
                     if (i.QtyOnHand == Qty)
                         l.Add(i);
