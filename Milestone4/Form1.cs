@@ -113,5 +113,21 @@ namespace Milestone4
             }
 
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var i = int.Parse(textBox2.Text);
+                var id = ((ItemObj)comboBox1.SelectedItem).Id;
+                _im.ReStock(i, id);
+
+                FillItems();
+
+            }
+            catch (Exception)
+            {
+            }
+        }
     }
 }
