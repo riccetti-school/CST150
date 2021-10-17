@@ -132,6 +132,8 @@ namespace Activity15
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Dominic Riccetti - Luck Numbers";
             this.ResumeLayout(false);
