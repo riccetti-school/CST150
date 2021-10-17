@@ -186,6 +186,8 @@ namespace Milestone5
                 button6_Click(null, null);
                 System.Threading.Thread.Yield();
             }
+
+            L("Finished stress test run.");
         }
     }
 }
